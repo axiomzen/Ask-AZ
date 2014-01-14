@@ -9,6 +9,7 @@
     "express": "3.4.7",
     "jade": "*",
     "stylus": "*",
-    "redis": "~0.10.0"
+    "redis": "~0.10.0",
+    "coffee-script": "~1.6.3"
   }
 }
