@@ -1,4 +1,13 @@
-client = require('redis').createClient()
+redis = require('redis')
+client = {}
+url = process.env.REDISTOGO_URL
+
+if url
+  rtg = require("url").parse(url)
+  client = redis.createClient(rtg.port, rtg.hostname)
+  client.auth rtg.auth.split(":")[1]
+else
+  client = redis.createClient()
 
 exports.index = (req, res) ->
   res.render "index"
