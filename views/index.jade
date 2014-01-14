@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Ask AxiomZen
+  .col-md-8.col-md-offset-2
+    form#ask(action='/ask', method='post')
+      .input-group
+        input.form-control(name='question', placeholder='Ask Us Anything!')
+        span.input-group-btn
+          button.btn.btn-primary(type='button') Submit
